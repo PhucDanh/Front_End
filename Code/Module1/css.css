@@ -1,0 +1,61 @@
+.logo {
+    width: 250px;
+}
+#navbar{
+    background-color: #0D1524;
+}
+#navbar ul{
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    margin: 0;
+}
+#navbar ul li{
+    display: inline;
+    margin: 0px 20px;
+}
+#navbar ul li a:hover{
+    color: red;
+}
+#navbar ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+#carousel{
+    height: 450px;
+    margin-top: 10px;
+    background-image: url('../Module1/img/slider_1.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+}
+.intro-text{
+    font-size: 20px;
+    color: grey;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-indent: 40px;
+    text-align: justify;
+}
+.intro-product-left,.intro-product-right{
+    float: left;
+    width: 50%;
+}
+.intro-product-item{
+    float: left;
+    padding: 10px;
+}
+.intro-product-item-1{
+    width: 45%;
+}
+.intro-product-item-2{
+    width: 100%;
+}
+.intro-product-item img{
+    width: 80%;
+    display: block;
+}
