@@ -1,0 +1,43 @@
+JavaScript
+
+JavaScript HTML DOM (Document Object Model) => selector của javascript
+element là 1 tag có đóng mở
+var element = document.api() - querySelector
+nội dung bên trong tag: setAttribute
+Ngắt sự kiện
+
+variable: syntax: var, let
+
+Function:
+Operation:
+Library:
+Console.log(); => print ra màn hình
+//playcode.io
+
+
+CSS:
+Layout: 
+- float _ clear 
+- flex _ not need clear
+Display: 2 loại
+- inline
+- block
+Position:
+- Để con nhảy đc trong cha thì position của cha phải là relative
+- Absolute của con cần xác định khoảng cách đối vs cha
+Hiệu ứng: => CSS advanced
+- Hover: => Hover effect idea page 
++ Trước khi hover
++ Sau khi hover
++ Transition
+Reponsive
+
+Boostrap: Thư viện viết bằng css và javascript
+- Grid system
+- getboostrap.com
+
+Strange library:
+- owlcaruosel
+
+page: css-tricks.com
+livesasscompile.setting.formats vscode

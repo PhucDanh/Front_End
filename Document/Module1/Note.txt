@@ -1,0 +1,21 @@
+https://github.com/darkdragon276/Learning/tree/master/Course/FrontEnd58?fbclid=IwAR0xTiDvAF-9Y-BbgGpcdZXCiNoniPDNTtv3ejCP4kSUxp52jFcR_cZOrt0
+don't make me think
+browser 3 phan:
+- giao diện
+- javascript engine
+- html/css engine
+=> source là chrominum => C++
+=> kde => kde github mirror
+w3school
+tag type:
+- tag bố cục (tag layout)
+- tag đệm (div)
+- tag con
+
+border: width style color;
+margin, padding: top, right, bot, left
+
+SASS:
+- biến: style
+- hàm: 
+- nguyên tắc: SCSS 7:1 : helper => vendor => base => component => layouts => pages => theme
