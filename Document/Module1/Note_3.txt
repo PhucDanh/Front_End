@@ -1,0 +1,27 @@
+Grid system: tỉ lệ 12
+Chủ yếu chia theo col
+
+Table:
+- colspan
+- rowspan
+- tr
+- th => cell
+- head ko dùng đc colspan vs rowspan
+Grid css:
+- teamplate nằm ở cha: grid-template-area/column/row: repeat(num, 1fr);
+- ở con: grid-area, grid-row, grid-column
+
+MDN: tài liệu ngôn ngữ web
+DOM:
+- HTML DOM:
++ document
++ element
++ getElement: getElement, querySelector
++ thêm, xóa, thay đổi element: innerHTML, createElement => appendChild
++ DOM tới cha gần nhất với con: closet
+
+- Phân biệt var và let:
++ var có scope là global
++ let có scope là local
+
+- Hoisting trong javascript

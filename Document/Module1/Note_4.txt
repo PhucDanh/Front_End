@@ -1,0 +1,29 @@
+Object trong JavaScript:
+let object = {
+    key: value,
+    first: function(){}
+}
+Object.assign(obj2, obj1); => cách duy nhất để tạo 2 object giống nhau
+
+khai báo object kiểu prototype:
+var object = function(){
+    this.a = 12;
+    this.b = 'String';
+}
+let objectnew = new object;
+
+vòng lặp for trong JavaScript:
+- for
+- forEach
+- forin
+- forof
+
+Validate in JavaScript:
+- Regex (regular expression)
+- Kiểm tra đầu vào 
+
+Local Storage => Cache => Lưu trữ token
+- Inspect => Application => Storage
+- 
+
+https://login.cybersoft.edu.vn/video

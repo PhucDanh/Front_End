@@ -1,0 +1,32 @@
+Lambda function => Anonymus function
+var lambda = function(func){
+    func(4 , 5);
+}
+lambda((a, b) => a+b);
+
+Variant argument => thường dùng cho khai báo argument
+Kiểu dữ liệu giả Template
+
+
+JavaScipt:
+- Object có 2 kiểu tạo: normal vs prototype (follow class)
+- Copy object and method: object.assign();
+- Thư viện hỗ trợ cho Object, String, Array
+
+
+
+JSON to get local storage:
+this.backup = function() {
+        let json_s = JSON.stringify(this);
+        console.log(json_s);
+        localStorage.setItem("NhanVien" + this.maNhanVien, json_s);
+    }
+
+    this.restore = function(maNhanVien) {
+        let json_s = localStorage.getItem("NhanVien" + maNhanVien);
+        if(json_s === "") {
+            return null;
+        }
+        let object_o = JSON.parse(json_s);
+        return Object.assign(this, object_o);
+    }
