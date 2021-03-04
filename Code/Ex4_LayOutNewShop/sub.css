@@ -1,0 +1,26 @@
+#product {
+    padding: 20px 200px;
+    text-align: center;
+  }
+  
+  #product h1 {
+    color: blue;
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+  }
+  
+  #product .product-items {
+    display: flex;
+    gap: 20px;
+  }
+  
+  #product .product-items .product-item {
+    flex: 20%;
+  }
+  
+  #product .product-items .product-item img {
+    width: 100%;
+    height: 80%;
+    display: block;
+  }
