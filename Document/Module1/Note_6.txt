@@ -1,0 +1,17 @@
+AXIOS:
+- create method to request, respone in frontend
+- then đc gọi khi request succesful
+- catch đc gọi khi có lỗi
+- let promise
+- data trả về thuộc dạng properties => nếu cần method thì nên assign
+
+JSON:
+- khai báo theo 1 cặp key value và có thể nesting
+AJAX:
+
+REST API:
+- những link request được chuẩn hóa:
++ Create
++ Request
++ Update
++ Delete
