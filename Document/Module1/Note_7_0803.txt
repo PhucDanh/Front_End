@@ -1,0 +1,22 @@
+Regex cheat sheet
+https://regexr.com/
+Trong javasript dùng: new RegExp có thể bỏ biến vào và /.../ ko thể bỏ biến
+
+Khai báo method trong class:
+Validate.method2 = function(){} => static
+var Validate = function(){} and Validate.prototype.method3 => unstatic
+==> 
+
+Install NodeJs,surge (https://surge.sh/help/getting-started-with-surge?fbclid=IwAR0hzLDCPvkqwOTUf75cCJChdydFNFMAqY77aNkeoJstCJ1XqUotuFJpJ_8)
+=> Deploy lên trên domain: https://surge.sh/help/adding-a-custom-domain
+
+SpringBoot
+- Install IntelliJ (https://www.jetbrains.com/idea/download/#section=windows)
+- Create SpringBoot project (https://start.spring.io/)
+- SpringBoot getting started (https://www.youtube.com/watch?v=Ke7Tr4RgRTs&list=PLEb8Egn56IXbVB-T5-pUpiX_IWHYhCS00&index=2)
+- Annotiation of SpringBoot:
++ Bean: có properties, constructor ko input, có setter/getter => component
++ Difference between Component and RestComponent
+
+Review MVC backend
+Difference MVC between frontend and backend

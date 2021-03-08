@@ -23,7 +23,7 @@ var addNhanVien = function(nhanVien){
 
 var getNhanVien = function(){
     let promise = axios({
-        url: `http://svcy.myclass.vn/api/QuanLyNhanVienApi/LayDanhSachNhanVien`,
+        url: `http://192.168.0.114:8080/NhanVien`,
         method: "GET",
         reponseType: "json",
     })
@@ -108,4 +108,4 @@ document.getElementById('btnCapNhat').onclick = function(event){
     })
 }
 
-// getNhanVien();
+getNhanVien();
