@@ -1,0 +1,35 @@
+#navbar{
+    nav{
+        background-color: rgba(25, 25, 25, 0.8)!important;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        h1{
+            margin-bottom: 0.8em;
+            @include text(#000,4em,500);
+            text-align: center;
+            a{
+                @include text(#fff,56px,300);
+                // text-transform: capitalize;
+                letter-spacing: 2px;
+                span{
+                    color: #00cdce;
+                }
+            }
+        }
+        #navbarSupportedContent{
+            .navbar-nav{
+                li{
+                    a{
+                        @include text(#fff,16px,400);
+                        letter-spacing: 1px;
+                        margin: 0 1em;
+                        background-color: rgba(12, 11, 11, 0);
+                        border: none;
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}

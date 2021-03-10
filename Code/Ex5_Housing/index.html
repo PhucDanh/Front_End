@@ -2,36 +2,131 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+
         <!--Fontawesome-->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!--Owl Carousel-->
+        <link rel="stylesheet" href="./css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     </head>
     <body>
         <section id="navbar">
-            <div class="right">
-                <p><span>Hous</span>ing</p>
-            </div>
-            <div class="selector">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Portfolio</li>
-                    <li>Agents</li>
-                    <li>Contact</li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-transparent">
+                <h1>
+                    <a class="navbar-brand" href="#navbar">Hous<span>ing</span></a>
+                </h1>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#agents">Agents</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </section>
+
+        <section id="home">
+            <div class="owl-carousel owl-theme owl-loaded">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="image">
+                                <img src="./images/b1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.Itaque,molestiae.</p>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="image">
+                                <img src="./images/b2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.Itaque,molestiae.</p>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="image">
+                                <img src="./images/b3.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.Itaque,molestiae.</p>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="image">
+                                <img src="./images/b4.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <h4>Lorem, ipsum dolor.</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
+                                    elit.Itaque,molestiae.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <div class="owl-prev">prev</div>
+                    <div class="owl-next">next</div>
+                </div>
+                <div class="owl-dots">
+                    <div class="owl-dot active"><span></span></div>
+                    <div class="owl-dot"><span></span></div>
+                    <div class="owl-dot"><span></span></div>
+                </div>
             </div>
         </section>
-        <section id="carousel"></section>
-        <section id="information"></section>
+        <section id="about"></section>
         <section id="stats_counter"></section>
         <section id="blog"></section>
         <section id="get_more"></section>
         <section id="portfolio"></section>
         <section id="subcribe"></section>
-        <section id="agents_info"></section>
+        <section id="agents"></section>
         <section id="map"></section>
         <section id="contact"></section>
         <section id="footer"></section>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!--Owl Carousel-->
+        <!-- <script src="jquery.min.js"></script> -->
+        <script src="./js/owl.carousel.min.js"></script>
     </body>
 </html>
