@@ -1,0 +1,314 @@
+// =================== 1 - Khai báo biến với từ khoá var let và const ===============
+//Ghi chú: var phạm vi hoạt động trên toàn bộ scope, let phạm vi hoạt động trên từng scope, trong cùng 1 scope không thể khai báo 2 biến let trùng tên.
+//Var hổ trợ cơ chế hoisting, let thì không hổ trợ, const tương tự let tuy nhiên không thể gán lại được giá trị khác
+
+let title = 'cybersoft';
+
+{ //scope
+    let title = 'bootcamp04';
+    console.log('kq1', title);
+}
+
+console.log('kq2', title);
+//Ví dụ về onclick button => in ra hộp thoại giá trị của button đó
+// document.getElementById('btn1').onclick = function (event) {
+//     console.log(event)
+//     var tagButton = event.target;
+//     alert(tagButton.innerHTML);
+// }
+
+// document.getElementById('btn2').onclick = function (event) {
+//     var tagButton = event.target;
+//     alert(tagButton.innerHTML);
+// }
+
+// document.getElementById('btn3').onclick = function (event) {
+//     var tagButton = event.target;
+//     alert(tagButton.innerHTML);
+// }
+
+let arrButton = document.getElementsByTagName('button');
+for (let i = 0; i < arrButton.length; i++) {
+    //Mỗi lần duyệt lấy ra 1 thẻ button
+    let button = arrButton[i];
+
+    let value = button.innerHTML;
+
+    button.onclick = function (event) {
+        alert(value);
+    }
+}
+
+
+const domain = 'https://svcy.myclass.vn/api';
+
+const object = {
+    id: 1,
+    name: 'khải'
+}
+
+object.id = 5;
+object.name = 'nam';
+console.log(object);
+
+
+
+// ======================= 2. Arrow function =================
+
+//es5
+function showMessage(name) {
+    console.log(name);
+}
+showMessage('Khải')
+
+//es6
+let showMessageES6 = (name) => {
+    console.log(name)
+}
+showMessageES6('Khải');
+//Đối với hàm có 1 lệnh return duy nhất 
+//es5
+let tinhTongES5 = function (a, b) {
+    return a + b;
+}
+//es6
+// let tinhTong = (a, b) => a + b;
+// let tong = tinhTong(5, 10)
+// console.log(tong);
+
+
+
+//Ngữ cảnh con trỏ this. 
+//1. Khi this không nằm trong function hay đối tượng nào thì this sẽ là window
+console.log(this); //Ngữ cảnh window là ngữ cảnh mặc định
+
+//2. this nằm trong function (prototype - class) thì this đại diện cho function(prototype - class) đó
+function SinhVien() {
+    this.maSV = '008';
+    this.hoTen = 'Lê Thị Na';
+    this.hienThiThongTin = function () {
+        console.log('Mã', this.maSV);
+        console.log('Họ tên', this.hoTen);
+    }
+}
+let sv = new SinhVien();
+sv.hienThiThongTin();
+sv['hienThiThongTin']();
+console.log(sv);
+//3 this nằm trong đối tượng (object) thì this sẽ là object đó
+let hocVien = {
+    maHV: '001',
+    tenHV: 'Trần Văn Tèo',
+    xuatThongTinHocVien: function () { // phương thức sẽ dùng function để this vẫn hiểu là đối tượng
+        //Khai báo hàm trong phương thức thì sẽ không dùng từ khoá function nữa mà thay vào đó ta sẽ dùng arrow function
+        let hienThiThongTin = () => {
+            console.log('mã học viên', this.maHV);
+            console.log('tên học viên', this.tenHV);
+        }
+        hienThiThongTin();
+    }
+}
+hocVien.xuatThongTinHocVien();
+
+
+
+
+//Cho mảng color => render ra các button và định nghĩa sự kiện chọn màu ngôi nhà
+
+let arrColor = ['red', 'green', 'blue', 'yellow', 'orange', 'pink'];
+
+//Bước 1: Tạo các nút button in ra giao diện
+for (let i = 0; i < arrColor.length; i++) {
+    //Mỗi lần duyệt lấy ra 1 màu
+    let color = arrColor[i];
+    //Tạo ra nút button 
+    let button = document.createElement('button');
+    button.className = 'm-2';
+    button.style.backgroundColor = color;
+    button.innerHTML = color;
+    button.onclick = function () {
+        //Bước 2: Định nghĩa function click c
+        document.getElementById('house').style.backgroundColor = color;
+    }
+    document.getElementById('colors').appendChild(button);
+}
+
+//=================== Default parameter ===============
+//Lưu ý: Default parameter là cách gán giá trị tham số mặc định cho hàm
+
+function getUserInfo (name = 'Mị', age = 18 + 2) {
+
+    if(age > 18 && age < 30) {
+        console.log(`${name} còn trẻ ${name} muốn đi chơi`);
+    }
+}
+
+getUserInfo('Khải',17);
+
+//=================== Rest parameter ===================
+
+
+var tinhTong = function (...rest) { //...rest là mảng
+    switch(rest.length) { 
+        case 2 : {
+            let tong = rest[0] + rest[1];
+            console.log(tong);
+        };break
+        case 3: {
+            let tong = rest[0] + rest[1] + rest[2];
+            console.log(tong);
+        } ;break
+        default : {
+            console.log('Tham số không hợp lệ!')
+        }
+    }
+}
+
+tinhTong(2,4,8,1,2);
+
+
+
+//Bài tập tính điểm khối 1 2
+
+//Định nghĩa sự kiện tính điểm khi người dùng click vào nút tính
+
+document.querySelector('#btnTinhDiemKhoi1').onclick = function () {
+    //Lấy thông tin người dùng nhập từ input
+    let diemToan = document.querySelector('#toan').value;
+    let diemLy = document.querySelector('#ly').value;
+    let diemHoa = document.querySelector('#hoa').value;
+    let ketQua = tinhDiemTrungBinh(diemHoa,diemLy,diemToan);
+    //Dom giao diện hiển thị kết quả
+    document.querySelector('#diemKhoi1').value = ketQua;
+}
+//Định nghĩa button tinhDiem Khối 2
+
+document.querySelector('#btnTinhDiemKhoi2').onclick = function (){ 
+    //Lấy thông tin các điểm anh, địa, văn,sử
+    let anh = document.querySelector('#anh').value;
+    let dia = document.querySelector('#dia').value;
+    let su = document.querySelector('#su').value;
+    let van = document.querySelector('#van').value;
+
+    let ketQua = tinhDiemTrungBinh(van,su,dia,anh);
+    document.querySelector('#diemKhoi2').value = ketQua;
+
+}
+
+let tinhDiemTrungBinh = function (...arrDiem) {
+    console.log(arrDiem)
+    let ketQua = '';
+    switch(arrDiem.length) {
+        case 3 : {
+            let dtb = (Number(arrDiem[0]) + Number(arrDiem[1]) + Number(arrDiem[2]))/3;
+            ketQua = dtb.toFixed(2);
+        };break;
+        case 4 : {
+            let dtb = (Number(arrDiem[0]) + Number(arrDiem[1]) + Number(arrDiem[2]) + Number(arrDiem[3]) )/4;
+            ketQua = dtb.toFixed(2);
+            
+        };break;
+        default : {
+            ketQua = 'Tham số không hợp lệ !';
+        };break;
+    } 
+    return ketQua;
+}
+
+//=========================== spread operator =============
+
+
+let sinhVien1 = {ma:1,ten:'Nguyễn Văn Tèo'};
+
+let sinhVien2 = {...sinhVien1,lop:'bootcamp04',ten:'Trần văn tí'};
+
+
+
+console.log('1',sinhVien1); // ????
+console.log('2',sinhVien2);
+let arr1 = [ 1,2,3,4];
+let arr2 = [...arr1,5];
+console.log(arr1);
+console.log(arr2);
+
+
+
+
+document.querySelector('#btnXuatThongTin').onclick = function(){ 
+    // let nhanVien = {
+    //     ma: document.querySelector('#maNhanVien').value
+    // }
+    let arrInput = document.querySelectorAll('#form input,#form select');
+    let nhanVien = {};
+    for(let i=0 ; i< arrInput.length ;i++ ){
+        //Mỗi lần duyệt lấy ra 1 thẻ 
+        let tagInut = arrInput[i];
+        let id = tagInut.id;
+        // let {id,value} = tagInut;
+        nhanVien = {...nhanVien};
+        nhanVien[id] = tagInut.value;
+    }
+    console.log(nhanVien);
+}
+
+// //maNhanVien là id của taginput đầu tiên
+// {maNhanVien: '1'}
+// //lan 2
+// nhanVien = {maNhanVien: '1'}
+// nhanVien = {maNhanVien: '1',tenNhanVien:'Nguyen van a'}
+// ======================== Destructuring =======
+//es5
+let phone = {
+    id:'IP',
+    name:'iphone',
+    price: 1000,
+    info : {
+        cpu:'intel',
+        ram:8
+    }
+}
+// let id = phone.id;
+// let name = phone.name;
+
+//es6
+let {id,name, ...rest} = phone;
+
+console.log(rest)
+
+
+
+let sinhVien = [1,'Nguyễn văn a'];
+
+let [maSV,tenSV] = sinhVien;
+
+
+
+// =============object literal ==============
+
+
+let keyId = 'maSV';
+
+let keyName = 'tenSV';
+//Tính năng 1: Truyền động key cho object 
+let sinhVien123 = {
+    [keyId]:'123',
+    [keyName]: 'Nguyễn Văn A'
+}
+
+//Tính năng 2: Từ biến giá trị sinh ra tên thuộc tính
+
+let maSanPham = 'SP001';
+let tenSanPham = 'Samsung galaxy note 10 plus';
+let hienThiThongTin = function () {
+    console.log('Mã sản phẩm',maSanPham)
+    console.log('Tên sản phẩm',tenSanPham)
+}
+
+let sp = {
+    maSanPham,
+    tenSanPham,
+    hienThiThongTin
+}
+
+console.log(sp)
+sp.hienThiThongTin();

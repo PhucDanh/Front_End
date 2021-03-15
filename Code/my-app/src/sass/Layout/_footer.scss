@@ -1,0 +1,21 @@
+#footer{
+    padding: 40px 120px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 120px;
+    .footer-title{
+        flex: 70%;
+        p{
+            @include text(white,16px,200);
+            padding-top: 10px;
+        }
+    }
+    .footer-img{
+        flex: 30%;
+        img{
+            display: block;
+            object-fit: scale-down;
+        }
+    }
+}
