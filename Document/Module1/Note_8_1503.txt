@@ -1,0 +1,3 @@
+Phương thức render?
+Cú pháp JSX?
+bind?

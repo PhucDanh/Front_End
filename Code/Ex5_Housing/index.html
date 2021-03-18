@@ -137,8 +137,30 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ex iure, obcaecati cum facere odio quis aspernatur quisquam tempore officia necessitatibus beatae eaque rerum eos ad vero repudiandae laudantium molestiae dignissimos quidem? Optio magni obcaecati est fugiat fuga sequi porro, accusamus quidem aut possimus laborum impedit eum modi ut accusantium dolorum ullam expedita quod error non unde iusto doloremque quam.</p>
         </section>
         
-        <section id="stats_counter"></section>
-        <section id="blog"></section>
+        <section id="stats_counter" class="container-fluid py-5 text-center">
+            <h1>Stats</h1>
+            <div class="row">
+                <div class=" col-6 col-md-3">
+                    <div class="counter">3500</div>
+                    <h4>Clients</h4>
+                </div>
+                <div class=" col-6 col-md-3">
+                    <div class="counter">650</div>
+                    <h4>Plan</h4>
+                </div>
+                <div class=" col-6 col-md-3">
+                    <div class="counter">1021</div>
+                    <h4>Projects</h4>
+                </div>
+                <div class=" col-6 col-md-3">
+                    <div class="counter">1010</div>
+                    <h4>Likes</h4>
+                </div>
+            </div>
+        </section>
+        <section id="blog">
+            contanier
+        </section>
         <section id="get_more"></section>
         <section id="portfolio"></section>
         <section id="subcribe"></section>
@@ -178,6 +200,15 @@
                 // Parameters has to be in square bracket '[]'
                 owl.trigger('prev.owl.carousel', [300]);
             })
+        </script>
+
+        <!--Waypoint js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha384-LImtStOSlnBY4sWwuooVfAH2Oxa3eZ27sLjHhRaPviMxe1uWchubYBsQPOlj5zox" crossorigin="anonymous"></script>
+
+        <!--Countup JS-->
+        <script src="./lib/jquery.countup.min.js"></script>
+        <script>
+            $('.counter').countUp();
         </script>
     </body>
 </html>

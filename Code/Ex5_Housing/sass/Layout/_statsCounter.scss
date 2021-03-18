@@ -1,0 +1,20 @@
+#stats_counter{
+    background-color: #00cdce;
+    h1{
+        margin-bottom: 0.8em;
+        @include text(#000,4em,500);
+    }
+    .row{
+        margin: 0vw 10vw;
+    }
+    .counter{
+        color: #fff;
+        letter-spacing: 5px;
+        font-size: 44px;
+    }
+    h4{
+        @include text(#000,2em,400);
+        letter-spacing: 2px;
+        margin-top: 5px;
+    }
+}
