@@ -6,8 +6,8 @@ jobs:
     name: Deploy to surge
     steps:
       - uses: actions/checkout@v1
+      - run: cd ./Code/Ex4_LayOutNewShop/
       - name: Install surge and deploy to surge domain
-        run: cd ./Code/Ex4_LayOutNewShop/
         uses: actions/setup-node/@v1
         with:
           node-version: 8
