@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install surge and deploy to surge domain
-        uses: action/setup-node/@v1
+        uses: actions/setup-node/@v1
         with:
           node-version: 8
       - run: npm install --global surge
