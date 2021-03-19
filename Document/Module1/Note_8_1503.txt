@@ -1,3 +1,20 @@
-Phương thức render?
+﻿Phương thức render?
 Cú pháp JSX?
 bind?
+
+
+Git action => CI/CD => workflow bên thứ 3 => .yml file => .github/workflows:
+- name
+- trigger: on:push/pull(event)
+- jobs:
+	+ build:
+		_runs-on: (HĐH)
+		_name:
+		_steps:
+			-uses:
+			
+enviroment secret: project => setting => enviroment/secret
+- repository => cung cấp lobal variable secrets ${{}}
+- environment secret
+
+Key: react deploy git action
