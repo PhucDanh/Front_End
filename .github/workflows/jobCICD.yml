@@ -3,13 +3,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      working-dỉrectory: Code/Ex4_LayOutNewShop/
+    # env: 
+    #   working-dỉrectory: Code/Ex4_LayOutNewShop/
     name: Deploy to surge
     steps:
       - uses: actions/checkout@v1
       - name: directory 
-          working-directory: ${{env.working-directory}}
+          working-directory: Code/Ex4_LayOutNewShop/
       - name: Install surge and deploy to surge domain
         uses: actions/setup-node/@v1
         with:
