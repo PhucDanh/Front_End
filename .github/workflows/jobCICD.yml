@@ -6,7 +6,8 @@ jobs:
     name: Deploy to surge
     steps:
       - uses: actions/checkout@v1
-      - working-directory: ./Code/Ex4_LayOutNewShop/
+      - name:
+          working-directory: ./Code/Ex4_LayOutNewShop/
       - name: Install surge and deploy to surge domain
         uses: actions/setup-node/@v1
         with:
