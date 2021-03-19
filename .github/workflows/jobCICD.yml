@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to surge
     steps:
+      - run: cd ../../Code/Ex4_LayOutNewShop/
       - uses: actions/checkout@v1
       - name: Install surge and deploy to surge domain
         uses: actions/setup-node/@v1
         with:
           node-version: 8
       - run: npm install --global surge
-      - run: surge ../../Code/Ex4_LayOutNewShop/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
