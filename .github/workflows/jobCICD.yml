@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy to surge
     steps:
-      - run: cd ../../Code/Ex4_LayOutNewShop/
+      - run: cd ./Code/Ex4_LayOutNewShop/
       - uses: actions/checkout@v1
       - name: Install surge and deploy to surge domain
         uses: actions/setup-node/@v1
