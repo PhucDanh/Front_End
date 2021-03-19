@@ -2,7 +2,7 @@ name: Deloy website
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     name: Deploy to surge
     steps:
       - uses: actions/checkout@v1
