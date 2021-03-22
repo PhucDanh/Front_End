@@ -1,0 +1,5 @@
+Databinding
+Arrow function
+
+Mỗi dấu databinding chỉ chứa 1 thứ trong nó 
+=> có thể dùng function(){} và arrow function và sort if ()?...:....

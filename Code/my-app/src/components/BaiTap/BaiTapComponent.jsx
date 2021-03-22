@@ -21,6 +21,7 @@ export default class BaiTapComponent extends Component {
                 <Trend></Trend>
                 <Information></Information>
                 <Footer></Footer>
+                {/* <Databinding></Databinding> */}
             </div>
         )
     }

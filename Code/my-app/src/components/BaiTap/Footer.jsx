@@ -11,7 +11,6 @@ export default class Footer extends Component {
                     <img src="./img/card.png" alt />
                 </div>
             </div>
-
         )
     }
 }
