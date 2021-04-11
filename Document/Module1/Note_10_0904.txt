@@ -1,0 +1,13 @@
+Truyền dữ liệu:
+- Data
+- Instance
+
+Lodash: library 
+
+Redux:
+- Store(reducer) => state => props => dispatcher => store
+- Store: lưu trữ dữ liệu và cung cấp API để truy xuất
+- mapStateToProps: 
+- mapDispatchToProps: dispatch(action)
+- khi kiem tra state thi kiem tra vung nho: nếu cùng state thì ko render lại
+=> JSON.parse(JSON.stringify(state))

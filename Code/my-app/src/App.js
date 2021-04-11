@@ -7,6 +7,8 @@ import Databinding from './components/Example/Databinding';
 import HandleEvent from './components/Example/HandleEvent';
 import Loop from './components/Example/Loop';
 import Demostate from './components/Example/Demostate';
+import TableSinhVien from './components/FormValidation/TableSinhVien';
+import FormValidation from './components/FormValidation/FormValidation';
 
 function App() {
   return (
@@ -34,7 +36,9 @@ function App() {
       {/* <Databinding></Databinding> */}
       {/* <HandleEvent></HandleEvent> */}
       {/* <Loop></Loop> */}
-      <Demostate></Demostate>
+      {/* <Demostate></Demostate> */}
+      <FormValidation></FormValidation>
+      <TableSinhVien></TableSinhVien>
     </div>
   );
 }
